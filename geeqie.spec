@@ -13,7 +13,7 @@ BuildRequires:  libexiv-devel
 BuildRequires:  intltool 
 BuildRequires:	gtk2-devel
 
-Summary:        Graphics file browser utility.
+Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
 Source:         http://downloads.sourceforge.net/project/%{name}/%{name}/%{name}-%{version}%{prerelease}/geeqie-%{version}%{prerelease}.tar.gz
