@@ -1,7 +1,7 @@
 %define name    geeqie
 %define version 1.0
 %define prerelease beta2
-%define release %mkrel 0.%{prerelease}.1
+%define release %mkrel 0.%{prerelease}.2
 
 Name:    %{name}
 Version: %{version}
