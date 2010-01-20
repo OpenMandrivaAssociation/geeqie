@@ -3,7 +3,7 @@
 # define prerelease beta2
 %define svnrel	   1895
 # define release %mkrel 0.%{prerelease}.2
-%define release %mkrel 0.svn%{svnrel}.1
+%define release %mkrel 0.svn%{svnrel}.2
 
 Name:    %{name}
 Version: %{version}
@@ -22,7 +22,7 @@ Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
 Source:         %{name}.tar.gz
-# Patch0:		geeqie_64.patch
+Patch0:		geeqie_lib64.diff
 URL:		http://sourceforge.net/projects/geeqie/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -34,11 +34,11 @@ And external editor support.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p0
 
-./autogen.sh
 
 %build
-
+./autogen.sh
 %configure2_5x --with-readmedir="%{_docdir}/%{docname}" --enable-gps --enable-lirc
 
 
