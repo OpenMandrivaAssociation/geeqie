@@ -3,7 +3,7 @@
 # define prerelease beta2
 %define svnrel	   1895
 # define release %mkrel 0.%{prerelease}.2
-%define release %mkrel 0.svn%{svnrel}.2
+%define release %mkrel 0.svn%{svnrel}.3
 
 Name:    %{name}
 Version: %{version}
@@ -16,6 +16,7 @@ BuildRequires:  intltool
 BuildRequires:	gtk2-devel
 BuildRequires:	libchamplain-devel
 BuildRequires:	lirc-devel
+BuildRequires:	gnome-doc-utils
 Requires:	libchamplain0.4_0
 
 Summary:        Graphics file browser utility
