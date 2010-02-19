@@ -2,25 +2,27 @@
 %define version 1.0
 %define release %mkrel 1
 
+%define docname %{name}
+
 Name:    %{name}
 Version: %{version}
 Release: %{release}
 
 BuildRequires:  lcms-devel
-%define docname %{name}
 BuildRequires:  libexiv-devel
 BuildRequires:  intltool 
 BuildRequires:  gtk2-devel
 BuildRequires:  libchamplain-devel
 BuildRequires:  lirc-devel
 BuildRequires:  gnome-doc-utils
-Requires:       libchamplain0.4_0
+
 
 Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
 Source:         %{name}-%{version}.tar.gz
 Patch0:         geeqie_lib64.diff
+#patch fixes the libdir for x86_64
 URL:            http://sourceforge.net/projects/geeqie/
 BuildRoot:      {_tmppath}/%{name}-%{version}-build
 
@@ -46,8 +48,6 @@ autoreconf
 %__rm -rf "%{buildroot}"
 %makeinstall_std
 
-%__install -m 644 AUTHORS COPYING ChangeLog NEWS README README.lirc "%{buildroot}/%{_docdir}/%{docname}/"
-
 %find_lang %{name}
 
 %clean
@@ -55,7 +55,7 @@ autoreconf
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc %{_docdir}/%{docname}
+%doc AUTHORS COPYING ChangeLog NEWS README README.lirc 
 %{_bindir}/geeqie
 %{_datadir}/applications/geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
@@ -66,14 +66,4 @@ autoreconf
 
 
 %changelog
-* Sun Jul 19 2009 Petr 'Petos'Safarik <petos@mandrivalinux.cz> 1.0beta2-1pts2009.1
-- Version 1.0beta2 first release
- 
-* Thu May 12 2009 Petos <petos@physics.muni.cz> 1.0alpha2-2pts2009.1
-- Rebuild for 2009 Spring
- 
-* Mon Apr 20 2009 Petos <petos@physics.muni.cz> 1.0alpha2-2pts2009.0
-- New version 1.0alpha2 or release 2pts2009.0
- 
-* Mon Dec 02 2008 Petos <petos@physics.muni.cz> 1.0alpha2-1pts2009.0
-- New version 1.0alpha2 or release 1pts2009.0
+
