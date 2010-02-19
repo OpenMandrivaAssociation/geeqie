@@ -1,9 +1,5 @@
 %define name    geeqie
 %define version 1.0
-# define prerelease beta2
-# define svnrel	   1895
-# define release %mkrel 0.%{prerelease}.2
-# define release %mkrel 0.svn%{svnrel}.3
 %define release %mkrel 1
 
 Name:    %{name}
