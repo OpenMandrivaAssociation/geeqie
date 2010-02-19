@@ -21,10 +21,11 @@ Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
 Source:         %{name}-%{version}.tar.gz
+# sent upstream 2010/02/19 
+# http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
 Patch0:         geeqie_lib64.diff
-#patch fixes the libdir for x86_64
 URL:            http://sourceforge.net/projects/geeqie/
-BuildRoot:      {_tmppath}/%{name}-%{version}-build
+
 
 %description
 Geeqie is a browser for graphics files.
@@ -65,5 +66,5 @@ autoreconf
 %{_mandir}/man1/geeqie*
 
 
-%changelog
+
 
