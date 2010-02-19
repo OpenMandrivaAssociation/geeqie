@@ -25,6 +25,7 @@ Source:         %{name}-%{version}.tar.gz
 # http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
 Patch0:         geeqie_lib64.diff
 URL:            http://sourceforge.net/projects/geeqie/
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
 %description
