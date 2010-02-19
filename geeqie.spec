@@ -1,9 +1,10 @@
 %define name    geeqie
 %define version 1.0
 # define prerelease beta2
-%define svnrel	   1895
+# define svnrel	   1895
 # define release %mkrel 0.%{prerelease}.2
-%define release %mkrel 0.svn%{svnrel}.3
+# define release %mkrel 0.svn%{svnrel}.3
+%define release %mkrel 1
 
 Name:    %{name}
 Version: %{version}
@@ -22,7 +23,7 @@ Requires:	libchamplain0.4_0
 Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
-Source:         %{name}.tar.gz
+Source:         %{name}-%{version}.tar.gz
 Patch0:		geeqie_lib64.diff
 URL:		http://sourceforge.net/projects/geeqie/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -34,12 +35,12 @@ Includes thumbnail view, zoom and filtering features.
 And external editor support.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p0
 
 
 %build
-./autogen.sh
+autoreconf
 %configure2_5x --with-readmedir="%{_docdir}/%{docname}" --enable-gps --enable-lirc
 
 
