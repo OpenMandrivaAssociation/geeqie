@@ -10,19 +10,19 @@ BuildRequires:  lcms-devel
 %define docname %{name}
 BuildRequires:  libexiv-devel
 BuildRequires:  intltool 
-BuildRequires:	gtk2-devel
-BuildRequires:	libchamplain-devel
-BuildRequires:	lirc-devel
-BuildRequires:	gnome-doc-utils
-Requires:	libchamplain0.4_0
+BuildRequires:  gtk2-devel
+BuildRequires:  libchamplain-devel
+BuildRequires:  lirc-devel
+BuildRequires:  gnome-doc-utils
+Requires:       libchamplain0.4_0
 
 Summary:        Graphics file browser utility
 License:        GPLv2+
 Group:          Graphics
 Source:         %{name}-%{version}.tar.gz
-Patch0:		geeqie_lib64.diff
-URL:		http://sourceforge.net/projects/geeqie/
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+Patch0:         geeqie_lib64.diff
+URL:            http://sourceforge.net/projects/geeqie/
+BuildRoot:      {_tmppath}/%{name}-%{version}-build
 
 %description
 Geeqie is a browser for graphics files.
