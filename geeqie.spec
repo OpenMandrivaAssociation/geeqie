@@ -1,6 +1,6 @@
 %define name    geeqie
 %define version 1.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define docname %{name}
 
@@ -12,7 +12,7 @@ BuildRequires:  lcms-devel
 BuildRequires:  libexiv-devel
 BuildRequires:  intltool 
 BuildRequires:  gtk2-devel
-BuildRequires:  libchamplain-devel
+BuildRequires:  libchamplain-devel >= 0.7.1
 BuildRequires:  lirc-devel
 BuildRequires:  gnome-doc-utils
 
@@ -24,6 +24,7 @@ Source:         %{name}-%{version}.tar.gz
 # sent upstream 2010/02/19 
 # http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
 Patch0:         geeqie_lib64.diff
+Patch1:		geeqie-1.0-champlain0.8.patch
 URL:            http://sourceforge.net/projects/geeqie/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -37,7 +38,8 @@ And external editor support.
 %prep
 %setup -q
 %patch0 -p0
-
+%patch1 -p1
+autoreconf
 
 %build
 autoreconf
