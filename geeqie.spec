@@ -3,7 +3,7 @@
 Summary:	Graphics file browser utility
 Name:		geeqie
 Version:	1.0
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		Graphics
 URL:		http://sourceforge.net/projects/geeqie/
@@ -31,7 +31,7 @@ And external editor support.
 %setup -q
 %patch0 -p0
 %patch1 -p1
-autoreconf
+autoreconf -fi
 
 %build
 %configure2_5x \
@@ -42,6 +42,7 @@ autoreconf
 %make
 
 %install
+mkdir -p %{buildroot}%{_docdir}/%{name}/html
 %makeinstall_std
 
 %find_lang %{name}
