@@ -2,8 +2,8 @@
 
 Summary:	Graphics file browser utility
 Name:		geeqie
-Version:	1.0
-Release:	6
+Version:	1.1
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://sourceforge.net/projects/geeqie/
