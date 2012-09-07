@@ -14,7 +14,7 @@ Patch0:         geeqie_lib64.diff
 Patch1:		geeqie-1.0-champlain0.8.patch
 
 BuildRequires:  intltool 
-BuildRequires:  pkgconfig(champlain-0.12)
+BuildRequires:  libchamplain-devel
 BuildRequires:  pkgconfig(exiv2)
 BuildRequires:  pkgconfig(gnome-doc-utils)
 BuildRequires:  pkgconfig(gtk+-2.0)
