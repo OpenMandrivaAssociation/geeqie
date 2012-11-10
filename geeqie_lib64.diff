@@ -1,0 +1,20 @@
+--- BUILD/geeqie/configure.in	2010-01-15 23:07:57.000000000 +0100
++++ configure.in	2010-01-20 12:56:39.000000000 +0100
+@@ -225,7 +225,7 @@
+ AC_DEFINE_UNQUOTED([GQ_APP_DIR], "$appdir", [Location of application data])
+ AC_SUBST(appdir)
+ 
+-eval "eval gq_bindir=${prefix}/lib/${PACKAGE}"
++eval "eval gq_bindir=${libdir}/${PACKAGE}"
+ AC_DEFINE_UNQUOTED([GQ_BIN_DIR], "$gq_bindir", [Location of helper scripts and executables])
+ AC_SUBST(gq_bindir)
+ 
+@@ -251,7 +251,7 @@
+ [  --with-lirc-prefix=PATH Prefix where LIRC is installed],
+ [
+ for dir in `echo "$withval" | tr : ' '`; do
+-  if test -d $dir/lib; then CXXFLAGS="$CXXFLAGS -L$dir/lib"; fi
++  if test -d $libdir; then CXXFLAGS="$CXXFLAGS -L$libdir"; fi
+   if test -d $dir/include; then CXXFLAGS="$CXXFLAGS -I$dir/include"; fi
+   done
+ ])
