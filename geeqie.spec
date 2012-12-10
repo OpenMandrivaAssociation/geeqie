@@ -14,7 +14,7 @@ Patch0:         geeqie_lib64.diff
 Patch1:		geeqie-1.0-champlain0.8.patch
 
 BuildRequires:  intltool 
-BuildRequires:  libchamplain-devel
+BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(exiv2)
 BuildRequires:  pkgconfig(gnome-doc-utils)
 BuildRequires:  pkgconfig(gtk+-2.0)
@@ -57,3 +57,59 @@ mkdir -p %{buildroot}%{_docdir}/%{name}/html
 %{_libdir}/%{name}/*
 %{_mandir}/man1/geeqie*
 
+
+
+%changelog
+* Wed Sep 05 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.1-1
++ Revision: 816396
+- update to 1.1
+
+* Fri May 25 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.0-6
++ Revision: 800724
+- rebuild for new libchamplain
+- cleaned up spec
+
+* Wed Dec 01 2010 Funda Wang <fwang@mandriva.org> 1.0-4mdv2011.0
++ Revision: 604403
+- rebuild for new exiv2
+
+* Tue Aug 31 2010 Götz Waschk <waschk@mandriva.org> 1.0-3mdv2011.0
++ Revision: 574695
+- build with new libchamplain
+
+* Tue Aug 03 2010 Funda Wang <fwang@mandriva.org> 1.0-2mdv2011.0
++ Revision: 565538
+- rebuild for new exiv2
+
+* Fri Feb 19 2010 Michael Scherer <misc@mandriva.org> 1.0-1mdv2010.1
++ Revision: 508122
+- readd BuildRoot, as youri ask for it even if not used and deprecated
+
+  + Peťoš Šafařík <petos@mandriva.org>
+    - Spec cleaning
+    - Cleaning of SPEC
+    - Fixed mix of <tabs> and <spaces> in SPEC
+    - Removed old source tarball
+    - Final stable version 1.0
+
+* Thu Jan 28 2010 Peťoš Šafařík <petos@mandriva.org> 1.0-0.svn1895.3mdv2010.1
++ Revision: 497619
+- BuildRequires fixed
+- 64bit patch adds
+- Libdir patched with lib64.diff patch
+- Update to SVN branch.
+
+* Wed Dec 30 2009 Frederik Himpe <fhimpe@mandriva.org> 1.0-0.beta2.2mdv2010.1
++ Revision: 484195
+- Rebuild for new libexiv2
+
+* Mon Dec 28 2009 Götz Waschk <waschk@mandriva.org> 1.0-0.beta2.1mdv2010.1
++ Revision: 482955
+- fix summary
+
+  + Peťoš Šafařík <petos@mandriva.org>
+    - import geeqie
+
+
+* Thu Dec 24 2009 Petr 'Petos'Safarik <petos@mandrivalinux.cz> 1.0beta2-1pts2010.0
+- Version 1.0beta2 first release
