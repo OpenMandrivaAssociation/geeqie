@@ -34,7 +34,7 @@ And external editor support.
 autoreconf -fi
 
 %build
-%configure2_5x \
+%configure \
 	--with-readmedir="%{_docdir}/%{docname}" \
 	--enable-gps \
 	--enable-lirc
