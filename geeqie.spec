@@ -3,14 +3,14 @@
 Summary:	Graphics file browser utility
 Name:		geeqie
 Version:	1.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 URL:		http://sourceforge.net/projects/geeqie/
 Source0:	%{name}-%{version}.tar.gz
 # sent upstream 2010/02/19 
 # http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
-Patch0:         geeqie_lib64.diff
+Patch0:		geeqie_lib64.diff
 Patch1:		geeqie-1.0-champlain0.8.patch
 
 BuildRequires:  intltool 
