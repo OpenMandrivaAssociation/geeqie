@@ -39,20 +39,20 @@ autoreconf -fi
 	--enable-gps \
 	--enable-lirc
 
-%make
+%make_build
 
 %install
 mkdir -p %{buildroot}%{_docdir}/%{name}/html
-%makeinstall_std
+%make_install
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING ChangeLog NEWS README README.lirc 
+%doc AUTHORS COPYING ChangeLog NEWS README.md README.lirc 
 %{_bindir}/geeqie
 %{_datadir}/applications/geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
 %{_datadir}/%{name}/applications/*
 %{_datadir}/%{name}/template.desktop
-%{_libdir}/%{name}/*
+#{_libdir}/%{name}/*
 %{_mandir}/man1/geeqie*
