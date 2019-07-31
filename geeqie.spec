@@ -49,10 +49,14 @@ mkdir -p %{buildroot}%{_docdir}/%{name}/html
 
 %files -f %{name}.lang
 %doc AUTHORS COPYING ChangeLog NEWS README.md README.lirc 
+%{_datadir}/doc/geeqie/ChangeLog.html
+%{_datadir}/doc/geeqie/TODO
+%{_datadir}/doc/geeqie/html/*
 %{_bindir}/geeqie
 %{_datadir}/applications/geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
 %{_datadir}/%{name}/applications/*
 %{_datadir}/%{name}/template.desktop
+/usr/lib//geeqie/geeqie-*
 #{_libdir}/%{name}/*
 %{_mandir}/man1/geeqie*
