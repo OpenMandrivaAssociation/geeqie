@@ -2,24 +2,30 @@
 
 Summary:	Graphics file browser utility
 Name:		geeqie
-Version:	1.1
-Release:	3
+Version:	1.5
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://sourceforge.net/projects/geeqie/
 Source0:	%{name}-%{version}.tar.gz
 # sent upstream 2010/02/19 
 # http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
-Patch0:		geeqie_lib64.diff
-Patch1:		geeqie-1.0-champlain0.8.patch
+#Patch0:		geeqie_lib64.diff
+#Patch1:		geeqie-1.0-champlain0.8.patch
 
 BuildRequires:  intltool 
 BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(exiv2)
 BuildRequires:  pkgconfig(gnome-doc-utils)
-BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(liblircclient0)
+BuildRequires:	pkgconfig(lirc)
+BuildRequires:	pkgconfig(clutter-1.0)
+BuildRequires:	pkgconfig(lua)
+BuildRequires:	pkgconfig(librsvg-2.0)
+#BuildRequires:	pkgconfig(libwmf)
+BuildRequires:	pkgconfig(poppler-glib)	
 
 %description
 Geeqie is a browser for graphics files.
@@ -29,8 +35,6 @@ And external editor support.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
 autoreconf -fi
 
 %build
