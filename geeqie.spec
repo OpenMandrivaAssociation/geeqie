@@ -6,12 +6,8 @@ Version:	1.5
 Release:	1
 License:	GPLv2+
 Group:		Graphics
-URL:		http://sourceforge.net/projects/geeqie/
-Source0:	%{name}-%{version}.tar.gz
-# sent upstream 2010/02/19 
-# http://sourceforge.net/tracker/?func=detail&aid=2954914&group_id=222125&atid=1054680
-#Patch0:		geeqie_lib64.diff
-#Patch1:		geeqie-1.0-champlain0.8.patch
+URL:		https://github.com/BestImageViewer/geeqie
+Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  intltool 
 BuildRequires:  pkgconfig(champlain-0.12)
