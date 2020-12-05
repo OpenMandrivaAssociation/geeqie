@@ -57,7 +57,9 @@ mkdir -p %{buildroot}%{_docdir}/%{name}/html
 %{_datadir}/pixmaps/geeqie.png
 %{_datadir}/%{name}/applications/*
 %{_datadir}/%{name}/template.desktop
+%{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
 /usr/lib/geeqie/geeqie-*
 /usr/lib/geeqie/geocode-parameters.awk
+/usr/lib/geeqie/lensID
 #{_libdir}/%{name}/*
 %{_mandir}/man1/geeqie*
