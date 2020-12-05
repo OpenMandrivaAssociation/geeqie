@@ -51,7 +51,7 @@ mkdir -p %{buildroot}%{_docdir}/%{name}/html
 %doc AUTHORS COPYING ChangeLog NEWS README.md README.lirc 
 %{_datadir}/doc/geeqie/ChangeLog.html
 %{_datadir}/doc/geeqie/TODO
-%{_datadir}/doc/geeqie/html/*
+#{_datadir}/doc/geeqie/html/*
 %{_bindir}/geeqie
 %{_datadir}/applications/geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
