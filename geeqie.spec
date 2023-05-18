@@ -27,6 +27,7 @@ BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)	
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	pkgconfig(ddjvuapi)
+BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 
