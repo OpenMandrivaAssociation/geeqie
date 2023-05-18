@@ -32,6 +32,7 @@ BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(gspell-1)
+BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 
