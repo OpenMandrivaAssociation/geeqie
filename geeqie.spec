@@ -31,6 +31,7 @@ BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(lua)
+BuildRequires:	pkgconfig(gspell-1)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 
