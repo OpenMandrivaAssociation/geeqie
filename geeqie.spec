@@ -35,6 +35,8 @@ BuildRequires:	pkgconfig(gspell-1)
 BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
+# Really xxd
+BuildRequires:	vim
 
 %description
 Geeqie is a browser for graphics files.
