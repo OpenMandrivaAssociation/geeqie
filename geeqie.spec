@@ -30,6 +30,7 @@ BuildRequires:	pkgconfig(ddjvuapi)
 BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
+BuildRequires:	pkgconfig(lua)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 
