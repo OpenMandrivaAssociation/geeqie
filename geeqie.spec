@@ -2,18 +2,21 @@
 
 Summary:	Graphics file browser utility
 Name:		geeqie
-Version:	1.6
+Version:	2.0.1
 Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		https://github.com/BestImageViewer/geeqie
 Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}/%{name}-%{version}.tar.xz
+Patch0:		geeqie-exiv2-0.28.patch
 
 BuildRequires:  intltool 
+BuildRequires:	pkgconfig(libffmpegthumbnailer)
 BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(exiv2)
 BuildRequires:  pkgconfig(gnome-doc-utils)
 BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(liblircclient0)
 BuildRequires:	pkgconfig(lirc)
@@ -22,6 +25,10 @@ BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(librsvg-2.0)
 #BuildRequires:	pkgconfig(libwmf)
 BuildRequires:	pkgconfig(poppler-glib)	
+BuildRequires:	pkgconfig(libarchive)
+BuildRequires:	pkgconfig(ddjvuapi)
+BuildRequires:	yelp-tools
+BuildRequires:	meson
 
 %description
 Geeqie is a browser for graphics files.
@@ -30,28 +37,20 @@ Includes thumbnail view, zoom and filtering features.
 And external editor support.
 
 %prep
-%setup -q
-autoreconf -fi
+%autosetup -p1
+sed -i -e 's,lua5.3,lua,g' meson.build
+%meson \
+	-Dheif=disabled
 
 %build
-%configure \
-	--with-readmedir="%{_docdir}/%{docname}" \
-	--enable-gps \
-	--enable-lirc
-
-%make_build
+%meson_build
 
 %install
-mkdir -p %{buildroot}%{_docdir}/%{name}/html
-%make_install
+%meson_install
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING ChangeLog NEWS README.md README.lirc 
-%{_datadir}/doc/geeqie/ChangeLog.html
-%{_datadir}/doc/geeqie/TODO
-#{_datadir}/doc/geeqie/html/*
 %{_bindir}/geeqie
 %{_datadir}/applications/geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
@@ -63,3 +62,4 @@ mkdir -p %{buildroot}%{_docdir}/%{name}/html
 /usr/lib/geeqie/lensID
 #{_libdir}/%{name}/*
 %{_mandir}/man1/geeqie*
+%doc %{_docdir}/%{name}
