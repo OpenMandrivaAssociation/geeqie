@@ -8,7 +8,6 @@ License:	GPLv2+
 Group:		Graphics
 URL:		https://github.com/BestImageViewer/geeqie
 Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}/%{name}-%{version}.tar.xz
-Patch0:		geeqie-exiv2-0.28.patch
 
 BuildRequires:  intltool 
 BuildRequires:	pkgconfig(libffmpegthumbnailer)
