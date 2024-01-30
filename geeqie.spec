@@ -59,10 +59,9 @@ And external editor support.
 
 %files -f %{name}.lang
 %{_bindir}/geeqie
-%{_datadir}/applications/geeqie.desktop
+%{_datadir}/applications/org.geeqie.Geeqie.desktop
 %{_datadir}/pixmaps/geeqie.png
 %{_datadir}/%{name}/applications/*
-%{_datadir}/%{name}/template.desktop
 %{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
 /usr/lib/geeqie/geeqie-*
 /usr/lib/geeqie/geocode-parameters.awk
