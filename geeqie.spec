@@ -45,7 +45,7 @@ And external editor support.
 
 %prep
 %autosetup -p1
-sed -i -e 's,lua5.3,lua,g' meson.build
+#sed -i -e 's,lua5.3,lua,g' meson.build
 %meson \
 	-Dheif=disabled
 
