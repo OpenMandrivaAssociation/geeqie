@@ -60,12 +60,15 @@ And external editor support.
 %files -f %{name}.lang
 %{_bindir}/geeqie
 %{_datadir}/applications/org.geeqie.Geeqie.desktop
-%{_datadir}/pixmaps/geeqie.png
 %{_datadir}/%{name}/applications/*
+%{_datadir}/geeqie/org.geeqie.template.desktop
 %{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
-/usr/lib/geeqie/geeqie-*
-/usr/lib/geeqie/geocode-parameters.awk
-/usr/lib/geeqie/lensID
-#{_libdir}/%{name}/*
+%{_prefix}/lib/geeqie/geeqie-*
+%{_prefix}/lib/geeqie/geocode-parameters.awk
+%{_prefix}/lib/geeqie/lensID
+%{_prefix}/lib/geeqie/downsize
+%{_prefix}/lib/geeqie/resize-help.sh
+%{_datadir}/pixmaps/geeqie.png
+%{_iconsdir}/hicolor/scalable/apps/geeqie.svg
 %{_mandir}/man1/geeqie*
 %doc %{_docdir}/%{name}
