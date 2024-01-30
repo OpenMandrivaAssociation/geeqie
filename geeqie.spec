@@ -2,13 +2,12 @@
 
 Summary:	Graphics file browser utility
 Name:		geeqie
-Version:	2.0.1
+Version:	2.2
 Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		https://github.com/BestImageViewer/geeqie
 Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}/%{name}-%{version}.tar.xz
-Patch0:		geeqie-exiv2-0.28.patch
 
 BuildRequires:  intltool 
 BuildRequires:	pkgconfig(libffmpegthumbnailer)
@@ -46,7 +45,7 @@ And external editor support.
 
 %prep
 %autosetup -p1
-sed -i -e 's,lua5.3,lua,g' meson.build
+#sed -i -e 's,lua5.3,lua,g' meson.build
 %meson \
 	-Dheif=disabled
 
@@ -60,14 +59,16 @@ sed -i -e 's,lua5.3,lua,g' meson.build
 
 %files -f %{name}.lang
 %{_bindir}/geeqie
-%{_datadir}/applications/geeqie.desktop
-%{_datadir}/pixmaps/geeqie.png
+%{_datadir}/applications/org.geeqie.Geeqie.desktop
 %{_datadir}/%{name}/applications/*
-%{_datadir}/%{name}/template.desktop
+%{_datadir}/geeqie/org.geeqie.template.desktop
 %{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
-/usr/lib/geeqie/geeqie-*
-/usr/lib/geeqie/geocode-parameters.awk
-/usr/lib/geeqie/lensID
-#{_libdir}/%{name}/*
+%{_prefix}/lib/geeqie/geeqie-*
+%{_prefix}/lib/geeqie/geocode-parameters.awk
+%{_prefix}/lib/geeqie/lensID
+%{_prefix}/lib/geeqie/downsize
+%{_prefix}/lib/geeqie/resize-help.sh
+%{_datadir}/pixmaps/geeqie.png
+%{_iconsdir}/hicolor/scalable/apps/geeqie.svg
 %{_mandir}/man1/geeqie*
 %doc %{_docdir}/%{name}
