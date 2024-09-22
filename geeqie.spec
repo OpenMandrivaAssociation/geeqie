@@ -63,6 +63,7 @@ And external editor support.
 %{_datadir}/%{name}/applications/*
 %{_datadir}/geeqie/org.geeqie.template.desktop
 %{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
+%{_datadir}/bash-completion/completions/geeqie
 %{_prefix}/lib/geeqie/geeqie-*
 %{_prefix}/lib/geeqie/geocode-parameters.awk
 %{_prefix}/lib/geeqie/lensID
