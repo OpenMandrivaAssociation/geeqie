@@ -3,7 +3,7 @@
 Summary:	Graphics file browser utility
 Name:		geeqie
 Version:	2.5
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 URL:		https://github.com/BestImageViewer/geeqie
