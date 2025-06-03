@@ -11,6 +11,7 @@ Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}
 
 BuildRequires:  intltool 
 BuildRequires:	pkgconfig(libffmpegthumbnailer)
+BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(exiv2)
 BuildRequires:  pkgconfig(gnome-doc-utils)
@@ -26,7 +27,7 @@ BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)	
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	pkgconfig(ddjvuapi)
-BuildRequires:	pkgconfig(evince-view-3.0)
+BuildRequires:	pkgconfig(evince-view-3.0) evince
 BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
