@@ -26,12 +26,14 @@ BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(poppler-glib)	
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	pkgconfig(ddjvuapi)
+BuildRequires:	pkgconfig(evince-view-3.0)
 BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(gspell-1)
 BuildRequires:	pkgconfig(libwebp)
+BuildRequires:	pkgconfig(OpenEXR)
 BuildRequires:	yelp-tools
 BuildRequires:	meson
 # Really xxd
