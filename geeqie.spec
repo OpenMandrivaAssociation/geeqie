@@ -64,6 +64,7 @@ And external editor support.
 %files -f %{name}.lang
 %{_bindir}/geeqie
 %{_datadir}/applications/org.geeqie.Geeqie.desktop
+%{_datadir}/applications/org.geeqie.cache-maintenance.desktop
 %{_datadir}/%{name}/applications/*
 %{_datadir}/geeqie/org.geeqie.template.desktop
 %{_datadir}/metainfo/org.geeqie.Geeqie.appdata.xml
