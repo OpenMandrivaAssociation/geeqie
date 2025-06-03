@@ -36,6 +36,7 @@ BuildRequires:	pkgconfig(gspell-1)
 BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	pkgconfig(OpenEXR)
 BuildRequires:	yelp-tools
+BuildRequires:	python-lxml
 BuildRequires:	meson
 # Really xxd
 BuildRequires:	vim
