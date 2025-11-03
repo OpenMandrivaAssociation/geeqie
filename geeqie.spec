@@ -3,13 +3,13 @@
 Summary:	Graphics file browser utility
 Name:		geeqie
 Version:	2.6.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphics
 URL:		https://github.com/BestImageViewer/geeqie
 Source0:	https://github.com/BestImageViewer/geeqie/releases/download/v%{version}/%{name}-%{version}.tar.xz
 
-BuildRequires:  intltool 
+BuildRequires:  intltool
 BuildRequires:	pkgconfig(libffmpegthumbnailer)
 BuildRequires:	pkgconfig(cfitsio)
 BuildRequires:  pkgconfig(champlain-0.12)
@@ -24,10 +24,10 @@ BuildRequires:	pkgconfig(clutter-1.0)
 #BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(librsvg-2.0)
 #BuildRequires:	pkgconfig(libwmf)
-BuildRequires:	pkgconfig(poppler-glib)	
+BuildRequires:	pkgconfig(poppler-glib)
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	pkgconfig(ddjvuapi)
-BuildRequires:	pkgconfig(evince-view-3.0) evince
+BuildRequires:	pkgconfig(evince-view-4.0) evince
 BuildRequires:	pkgconfig(libopenjp2)
 BuildRequires:	pkgconfig(libjxl)
 BuildRequires:	pkgconfig(libraw)
